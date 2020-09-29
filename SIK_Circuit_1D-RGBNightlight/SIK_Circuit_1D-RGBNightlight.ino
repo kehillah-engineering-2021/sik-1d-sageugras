@@ -46,13 +46,17 @@ void loop() {
     //Those functions are found at the bottom of the sketch.
     if (potentiometer > 0 && potentiometer <= 150)
       red();
-    if (potentiometer > 150 && potentiometer <= 300)
+    if (potentiometer > 150 && potentiometer <= 215)
+      crazycolor1();
+    if (potentiometer > 215 && potentiometer <= 300)
       orange();
     if (potentiometer > 300 && potentiometer <= 450)
       yellow();
     if (potentiometer > 450 && potentiometer <= 600)
       green();
-    if (potentiometer > 600 && potentiometer <= 750)
+    if (potentiometer > 600 && potentiometer <= 665)
+      crazycolor2();
+    if (potentiometer > 665 && potentiometer <= 750)
       cyan();
     if (potentiometer > 750 && potentiometer <= 900)
       blue();
@@ -116,6 +120,20 @@ void magenta () {
   analogWrite(RedPin, 100);
   analogWrite(GreenPin, 0);
   analogWrite(BluePin, 100);
+}
+void crazycolor1 () {
+
+  //set the LED pins to values that make red
+  analogWrite(RedPin, 25);
+  analogWrite(GreenPin, 25);
+  analogWrite(BluePin, 25);
+}
+void crazycolor2 () {
+
+  //set the LED pins to values that make red
+  analogWrite(RedPin, 100);
+  analogWrite(GreenPin, 10);
+  analogWrite(BluePin, 15);
 }
 void turnOff () {
 
