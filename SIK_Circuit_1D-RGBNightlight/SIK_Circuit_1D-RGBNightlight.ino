@@ -44,23 +44,25 @@ void loop() {
     //These nested if statements check for a variety of ranges and
     //call different functions based on the current potentiometer value.
     //Those functions are found at the bottom of the sketch.
-    if (potentiometer > 0 && potentiometer <= 150)
+    if (potentiometer > 0 && potentiometer <= 100)
+      changing();
+    if (potentiometer > 100 && potentiometer <= 200)
       red();
-    if (potentiometer > 150 && potentiometer <= 215)
+    if (potentiometer > 200 && potentiometer <= 300)
       crazycolor1();
-    if (potentiometer > 215 && potentiometer <= 300)
+    if (potentiometer > 300 && potentiometer <= 400)
       orange();
-    if (potentiometer > 300 && potentiometer <= 450)
+    if (potentiometer > 400 && potentiometer <= 500)
       yellow();
-    if (potentiometer > 450 && potentiometer <= 600)
+    if (potentiometer > 500 && potentiometer <= 600)
       green();
-    if (potentiometer > 600 && potentiometer <= 665)
+    if (potentiometer > 600 && potentiometer <= 700)
       crazycolor2();
-    if (potentiometer > 665 && potentiometer <= 750)
+    if (potentiometer > 800 && potentiometer <= 900)
       cyan();
-    if (potentiometer > 750 && potentiometer <= 900)
+    if (potentiometer > 900 && potentiometer <= 1000)
       blue();
-    if (potentiometer > 900)
+    if (potentiometer > 1000)
       magenta();
   }
   else {                                //if it isn't dark turn the LED off
@@ -141,4 +143,26 @@ void turnOff () {
   analogWrite(RedPin, 0);
   analogWrite(GreenPin, 0);
   analogWrite(BluePin, 0);
+}
+
+void changing () {
+        red();
+        delay(100);
+        crazycolor1();
+        delay(100);
+        orange();
+        delay(100);
+        yellow();
+        delay(100);
+        green();
+        delay(100);
+        crazycolor2();
+        delay(100);
+        cyan();
+        delay(100);
+        blue();
+        delay(100);
+        magenta();
+        delay(100);
+        
 }
