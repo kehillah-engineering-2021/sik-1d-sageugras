@@ -19,15 +19,71 @@ Hookup Guide:
 ### Code Explanation
 1. Store the light level from pin A0 in the variable photoresistor.
 2. Store the potentiometer value from pin A1 in the variable potentiometer.
+```
+  int photoresistor = A0;          //variable for storing the photoresistor value
+  int potentiometer = A1;          //this variable will hold a value based on the position of the knob
+  int threshold = 700;            //if the photoresistor reading is lower than this value the light will turn on
+```
 3. If the light level variable is above the threshold, call the function that turns the RGB LED off.
 4. If the light level variable is below the threshold, call one of the color functions to turn the RGB LED on.
-5. If potentiometer is between 0 and 150, turn the RGB LED on red.
-6. If potentiometer is between 151 and 300, turn the RGB LED on orange.
-7. If potentiometer is between 301 and 450, turn the RGB LED on yellow.
-8. If potentiometer is between 451 and 600, turn the RGB LED on green.
-9. If potentiometer is between 601 and 750, turn the RGB LED on cyan.
-10. If potentiometer is between 751 and 900, turn the RGB LED on blue.
-11. If potentiometer is greater than 900, turn the RGB LED on magenta.
+```
+  if (photoresistor < threshold) {}
+  
+  else {                                //if it isn't dark turn the LED off
+
+    turnOff();                            //call the turn off function
+    }
+```
+5. If potentiometer is between 0 and 100, turn the RGB LED on color changing mode.
+```
+    if (potentiometer > 0 && potentiometer <= 100)
+      changing();
+```
+6. If potentiometer is between 100 and 200, turn the RGB LED on green to red fade.
+```
+    if (potentiometer > 100 && potentiometer <= 200)
+      greenred();
+```
+7. If potentiometer is between 200 and 300, turn the RGB LED on crazycolor1.
+```
+ if (potentiometer > 200 && potentiometer <= 300)
+      crazycolor1();
+```
+8. If potentiometer is between 300 and 400, turn the RGB LED on orange.
+```
+if (potentiometer > 300 && potentiometer <= 400)
+      orange();
+```
+9. If potentiometer is between 400 and 500, turn the RGB LED on yellow.
+```
+ if (potentiometer > 400 && potentiometer <= 500)
+      yellow();
+```
+10. If potentiometer is between 500 and 600, turn the RGB LED on green.
+```
+    if (potentiometer > 500 && potentiometer <= 600)
+      green();
+```
+11. If potentiometer is between 600 and 700, turn the RGB LED on crazycolor2.
+```
+    if (potentiometer > 600 && potentiometer <= 700)
+      crazycolor2();
+```
+12. If potentiometer is between 700 and 800, turn the RGB LED on cyan.
+```
+    if (potentiometer > 700 && potentiometer <= 800)
+      cyan();
+```
+13. If potentiometer is between 800 and 900, turn the RGB LED on blue.
+```
+  if (potentiometer > 800 && potentiometer <= 900)
+      blue();
+```
+14. If potentiometer is greater than 900, turn the RGB LED on magenta.
+```
+  if (potentiometer > 900)
+      magenta();
+```
 
 ### Code in Action
 
