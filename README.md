@@ -2,7 +2,20 @@
 ## By: sageugras
 
 ### Introduction
+In this circuit, you'll take the night-light concept to the next level by adding an RGB LED, which is three differently colored Light-Emitting Diodes (LEDs) built into one component. RGB stands for Red, Green and Blue, and these three colors can be combined to create any color of the rainbow!
 ### How to Run Code
+Parts needed:
+
+![1Dparts](https://user-images.githubusercontent.com/54454824/95239577-fc6bc000-07bf-11eb-885f-bb6cd45b84cc.png)
+
+An RGB LED is actually three small LEDs --- one red, one green and one blue --- inside a normal LED housing. The RGB LED included in this kit has all the internal LEDs share the same ground wire, so there are four legs in total. To turn one color on, ensure ground is connected, then power one of the legs just as you would a regular LED. If you turn on more than one color at a time, you will see the colors start to blend together to form a new color.
+
+![RGB_LED_Pins](https://user-images.githubusercontent.com/54454824/95239584-ff66b080-07bf-11eb-8c3b-e289f902548f.png)
+
+Hookup Guide:
+
+![SIK_Circuit_1D-RGBNightlight](https://user-images.githubusercontent.com/54454824/95239588-0097dd80-07c0-11eb-9aff-9289cdac4d06.jpg)
+
 ### Code Explanation
 1. Store the light level from pin A0 in the variable photoresistor.
 2. Store the potentiometer value from pin A1 in the variable potentiometer.
