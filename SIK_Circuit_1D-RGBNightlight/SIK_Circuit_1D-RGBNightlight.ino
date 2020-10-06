@@ -47,7 +47,7 @@ void loop() {
     if (potentiometer > 0 && potentiometer <= 100)
       changing();
     if (potentiometer > 100 && potentiometer <= 200)
-      red();
+      greenred();
     if (potentiometer > 200 && potentiometer <= 300)
       crazycolor1();
     if (potentiometer > 300 && potentiometer <= 400)
@@ -137,15 +137,8 @@ void crazycolor2 () {
   analogWrite(GreenPin, 10);
   analogWrite(BluePin, 15);
 }
-void turnOff () {
 
-  //set all three LED pins to 0 or OFF
-  analogWrite(RedPin, 0);
-  analogWrite(GreenPin, 0);
-  analogWrite(BluePin, 0);
-}
-
-void changing () {
+void changing() {
         red();
         delay(100);
         crazycolor1();
@@ -164,5 +157,20 @@ void changing () {
         delay(100);
         magenta();
         delay(100);
-        
+}
+void turnOff () {
+
+  //set all three LED pins to 0 or OFF
+  analogWrite(RedPin, 0);
+  analogWrite(GreenPin, 0);
+  analogWrite(BluePin, 0);
+}
+
+void greenred() {
+  for(int i=0; i<255; i++) {
+    analogWrite(RedPin, i);
+    analogWrite(GreenPin, 255-i);
+    analogWrite(BluePin, 0);
+    delay(5);
+  }
 }
