@@ -87,5 +87,7 @@ if (potentiometer > 300 && potentiometer <= 400)
 
 ### Code in Action
 
+![ezgif com-optimize](https://user-images.githubusercontent.com/54454824/95606746-a55c2a00-0a0f-11eb-836e-5d007eefe425.gif)
+
 
 
